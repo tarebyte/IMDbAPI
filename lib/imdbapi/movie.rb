@@ -12,7 +12,7 @@ module Imdbapi
       # If a user wants to make a movie by ID we'll get the json data for it then create it
       # if not this is json we need to parse to make the movie without anymore work
       #
-      self.is_IMDb_iD(user_data) ? @movie_json = self.get_by_id(user_data) : @movie_json = make_movie(user_data)
+      self.is_IMDb_iD(user_data) ? @movie_json = self.get_by_id(user_data) : @movie_json = self.make_movie(user_data)
     end
 
     def is_IMDb_iD(data)
